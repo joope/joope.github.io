@@ -1,0 +1,23 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#header-wrapper, #social, #footer-wrapper {
+  margin: 7px;
+  padding: 7px;
+}
+
+.content-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 7px;
+}
+
+.content-wrapper section {
+  flex: 1 0 320px;
+  margin: 7px;
+  padding: 7px;
+  background: #ddd;
+}

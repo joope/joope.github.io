@@ -94,12 +94,18 @@ section:nth-child(7) {
 section:nth-child(4) {
   animation-duration: 0.8s;
   background: linear-gradient(270deg, #03CEA4 0%, rgba(2, 28, 30, 0.5) 100%);
-
 }
 
 #joope {
   animation: none;
   border: 2px solid white;
+}
+
+@media only screen and (max-width: 835px) {
+  #joope {
+    order: -1;
+    flex: 1 1 100%;
+  }
 }
 
 section h2 {

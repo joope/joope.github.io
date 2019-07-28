@@ -123,7 +123,7 @@ window.onload = function () {
         180,
         135,
     ]
-    e.style.background = `linear-gradient(${angle}deg, ${color} 0%, rgba(2, 28, 30, 0.5) 100%)`;
+    // e.style.background = `linear-gradient(${angle}deg, ${color} 0%, rgba(2, 28, 30, 0.5) 100%)`;
     // e.style.animationDelay = `${i*0.5}s`;
     // e.style.border = `16px solid ${color}`;
   })

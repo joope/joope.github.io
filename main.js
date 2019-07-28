@@ -92,7 +92,15 @@ window.onload = function () {
   setInterval(draw, 30);
 
   // Set random styles
-  const colors = ["#133a88", "#CE5A57", "#78A5A3", "#E1B16A"];
+  
+  const colors = [
+      "#133a88",        // Dark blue
+      // "#CE5A57",     // red
+    //   "#E1B16A",     // yellow
+    //   "#B8B8F3",     // blue
+        "#03CEA4",      // bright blue
+      "#EAC435"         // bright yellow
+    ];
 
 
   const elements = document.querySelectorAll('section');
@@ -103,6 +111,20 @@ window.onload = function () {
         // e.style.background = color;
         return;
     }
-    e.style.background = `linear-gradient(${angle}deg, ${color} 50%, #021C1E 50%)`;
+
+    const angles = [
+        315,
+        0,
+        45,
+        270,
+        0,
+        90,
+        225,
+        180,
+        135,
+    ]
+    e.style.background = `linear-gradient(${angle}deg, ${color} 0%, rgba(2, 28, 30, 0.5) 100%)`;
+    // e.style.animationDelay = `${i*0.5}s`;
+    // e.style.border = `16px solid ${color}`;
   })
 };

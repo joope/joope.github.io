@@ -107,10 +107,10 @@ window.onload = function () {
   elements.forEach((e,i) => {
     const color = colors[Math.floor(Math.random()*colors.length)];
     const angle = Math.floor(Math.random() * 360) * 90 - 45;
-    if (i === 4) {
-        // e.style.background = color;
-        return;
-    }
+    // if (i === 4) {
+    //     // e.style.background = color;
+    //     return;
+    // }
 
     const angles = [
         315,

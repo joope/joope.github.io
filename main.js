@@ -112,19 +112,32 @@ window.onload = function () {
     //     return;
     // }
 
-    const angles = [
-        315,
-        0,
-        45,
-        270,
-        0,
-        90,
-        225,
-        180,
-        135,
-    ]
+    // const angles = [
+    //     315,
+    //     0,
+    //     45,
+    //     270,
+    //     0,
+    //     90,
+    //     225,
+    //     180,
+    //     135,
+    // ]
     // e.style.background = `linear-gradient(${angle}deg, ${color} 0%, rgba(2, 28, 30, 0.5) 100%)`;
     // e.style.animationDelay = `${i*0.5}s`;
     // e.style.border = `16px solid ${color}`;
+    const names = [
+        'Joope',
+        'Joope',
+        'Github',
+        'Soundcloud',
+        'Instagram',
+        'DeviantArt',
+        'LinkedIn',
+    ]
+    e.onmouseover = function(){
+        const element = document.querySelector('#joope h2');
+        element.textContent = names[i];
+    }
   })
 };

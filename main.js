@@ -102,8 +102,13 @@ window.onload = function () {
       "#EAC435"         // bright yellow
     ];
 
-
+    const changeText = (text) => (event) => {
+        event.preventDefault();
+        document.querySelector('#joope > h2').textContent = text;
+        document.querySelector('#joope').style['border-bottom'] = '2px solid rgba(0, 0, 0, 0.0)';
+    }
   const elements = document.querySelectorAll('section');
+
   elements.forEach((e,i) => {
     const color = colors[Math.floor(Math.random()*colors.length)];
     const angle = Math.floor(Math.random() * 360) * 90 - 45;
@@ -128,16 +133,22 @@ window.onload = function () {
     // e.style.border = `16px solid ${color}`;
     const names = [
         'Joope',
-        'Joope',
         'Github',
         'Soundcloud',
         'Instagram',
         'DeviantArt',
         'LinkedIn',
     ]
-    e.onmouseover = function(){
-        const element = document.querySelector('#joope h2');
-        element.textContent = names[i];
+
+    e.onmouseover = changeText(names[i]);
+    e.ontouchstart = changeText(names[i]);
+    e.ontouchmove = changeText(names[i]);
+    // e.ontouchend = changeText(names[i]);
+    e.onmouseleave = (event) => {
+        if (event.relatedTarget.tagName === 'CANVAS') {
+            document.querySelector('#joope > h2').textContent = 'Joope';
+            document.querySelector('#joope').style['border-bottom'] = '2px solid white';
+        }
     }
   })
 };

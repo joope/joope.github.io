@@ -42,7 +42,7 @@ section {
   box-sizing: border-box;
   position: relative;
   flex: 1 0 auto;
-  margin: 7px;
+  /* margin: 7px; */
   padding: 7px;
   background: none;
   transition: border 1s;
@@ -73,28 +73,28 @@ section:hover {
 }
 
 section:nth-child(1) {
-  animation-duration: 0.1s;
+  animation-duration: 0.2s;
   /* background: linear-gradient(-45deg, #133a88 0%, rgba(2, 28, 30, 0.5) 100%); */
 }
 section:nth-child(2) {
-  animation-duration: 0.2s;
+  animation-duration: 0.4s;
   /* background: linear-gradient(0deg, #03CEA4 0%, rgba(2, 28, 30, 0.5) 100%); */
 
 }
 section:nth-child(3) {
-  animation-duration: 0.3s;
+  animation-duration: 0.6s;
   /* background: linear-gradient(45deg, #133a88 0%, rgba(2, 28, 30, 0.5) 100%); */
 }
 section:nth-child(4) {
-  animation-duration: 0.4s;
+  animation-duration: 0.8s;
   /* background: linear-gradient(90deg, #03CEA4 0%, rgba(2, 28, 30, 0.5) 100%); */
 }
 section:nth-child(5) {
-  animation-duration: 0.5s;
+  animation-duration: 1.0s;
   /* background: linear-gradient(90deg, #03CEA4 0%, rgba(2, 28, 30, 0.5) 100%); */
 }
 section:nth-child(6) {
-  animation-duration: 0.6s;
+  animation-duration: 1.2s;
   /* background: linear-gradient(135deg, #133a88 0%, rgba(2, 28, 30, 0.5) 100%); */
 
 }

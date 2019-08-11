@@ -133,3 +133,10 @@ window.onload = function () {
     }
   })
 };
+
+window.onpageshow = function (event) {
+    if (event.persisted) {
+        document.querySelector('#joope > h2').textContent = 'Joope';
+        document.querySelector('#joope').style['border-bottom'] = '2px solid white';
+    }
+};

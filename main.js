@@ -103,9 +103,13 @@ window.onload = function () {
     ];
 
     const changeText = (text) => (event) => {
-        // event.preventDefault();
+        console.log(event)
         document.querySelector('#joope > h2').textContent = text;
-        document.querySelector('#joope').style['border-bottom'] = '2px solid rgba(0, 0, 0, 0.0)';
+        if (event.target.className === 'Joope' || event.target.parentNode.className === 'Joope') {
+            document.querySelector('#joope').style['border-bottom'] = '2px solid white';
+        } else {
+            document.querySelector('#joope').style['border-bottom'] = '2px solid rgba(0, 0, 0, 0.0)';
+        }
     }
   const elements = document.querySelectorAll('section');
   const names = [
@@ -119,10 +123,10 @@ window.onload = function () {
   elements.forEach((e,i) => {
     e.onmouseover = changeText(names[i]);
     e.ontouchstart = changeText(names[i]);
-    e.ontouchmove = changeText(names[i]);
-    e.ontouchend = changeText(names[i]);
+    // e.ontouchmove = changeText(names[i]);
+    // e.ontouchend = changeText(names[i]);
     e.onmouseleave = (event) => {
-        if (event.relatedTarget.tagName === 'CANVAS') {
+        if (!event.relatedTarget || event.relatedTarget.tagName === 'CANVAS') {
             document.querySelector('#joope > h2').textContent = 'Joope';
             document.querySelector('#joope').style['border-bottom'] = '2px solid white';
         }

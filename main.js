@@ -103,47 +103,24 @@ window.onload = function () {
     ];
 
     const changeText = (text) => (event) => {
-        event.preventDefault();
+        // event.preventDefault();
         document.querySelector('#joope > h2').textContent = text;
         document.querySelector('#joope').style['border-bottom'] = '2px solid rgba(0, 0, 0, 0.0)';
     }
   const elements = document.querySelectorAll('section');
-
+  const names = [
+    'Joope',
+    'Github',
+    'Soundcloud',
+    'Instagram',
+    'DeviantArt',
+    'LinkedIn',
+    ];
   elements.forEach((e,i) => {
-    const color = colors[Math.floor(Math.random()*colors.length)];
-    const angle = Math.floor(Math.random() * 360) * 90 - 45;
-    // if (i === 4) {
-    //     // e.style.background = color;
-    //     return;
-    // }
-
-    // const angles = [
-    //     315,
-    //     0,
-    //     45,
-    //     270,
-    //     0,
-    //     90,
-    //     225,
-    //     180,
-    //     135,
-    // ]
-    // e.style.background = `linear-gradient(${angle}deg, ${color} 0%, rgba(2, 28, 30, 0.5) 100%)`;
-    // e.style.animationDelay = `${i*0.5}s`;
-    // e.style.border = `16px solid ${color}`;
-    const names = [
-        'Joope',
-        'Github',
-        'Soundcloud',
-        'Instagram',
-        'DeviantArt',
-        'LinkedIn',
-    ]
-
     e.onmouseover = changeText(names[i]);
     e.ontouchstart = changeText(names[i]);
     e.ontouchmove = changeText(names[i]);
-    // e.ontouchend = changeText(names[i]);
+    e.ontouchend = changeText(names[i]);
     e.onmouseleave = (event) => {
         if (event.relatedTarget.tagName === 'CANVAS') {
             document.querySelector('#joope > h2').textContent = 'Joope';

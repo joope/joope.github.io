@@ -61,6 +61,7 @@ section {
 
 section p {
   display: none;
+  font-size: 9.5px;
 }
 
 section:hover {
@@ -125,11 +126,20 @@ section:nth-child(9) {
 }
 
 @media only screen and (max-width: 835px) {
-  section {
+  .content-wrapper {
+    padding: 0;
+  }
+  #joope {
     flex: 1 0 100%;
   }
+  section {
+    flex: 0 1 19%;
+  }
+  section a {
+    padding: 7px;
+  }
   section p {
-    display: inline;
+    display: block;
   }
 }
 

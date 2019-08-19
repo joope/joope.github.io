@@ -56,6 +56,7 @@ section {
   color: white;
   background: none;
   border-bottom: 2px solid rgba(0, 0, 0, 0.0);
+  user-select: none;
 }
 
 section p {
@@ -121,8 +122,6 @@ section:nth-child(9) {
   border-bottom: 2px solid white;
   background: none;
   flex: 1 0 150px;
-  user-select: none;
-  pointer-events: none;
 }
 
 @media only screen and (max-width: 835px) {
